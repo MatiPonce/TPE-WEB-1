@@ -1,0 +1,24 @@
+<main id="cuerpo">
+    <p>ESTO SE CARGO CON PARTIAL RENDER</p>
+    <section class="contacto-form">
+        <h1>Contacto</h1>
+        <form id="contactoForm">
+            <label for="name">Nombre:</label>
+            <input type="text" id="nombre" name="name" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="mensaje" name="message" required></textarea>
+
+            <div class="captcha">
+                <label for="captcha">Captcha:</label>
+                <span id="captchaTexto"></span>
+                <input type="text" id="captcha" name="captcha" required>
+            </div>
+
+            <button class="btnEnviar" type="submit">Enviar</button>
+        </form>
+    </section>
+</main>

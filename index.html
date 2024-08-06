@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo" >
+           <a href="index.html"><img src="logo.png" alt="Logo de Fitness Web"></a>
+        </div>
+        <nav>
+            <button class="menu-hamburguesa">☰</button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobreNosotros.html" class="ruta" id="sobreNosotros">Sobre Nosotros</a></li>
+                <li><a href="contacto.html" class="ruta" id="contacto">Contacto</a></li>
+            </ul>
+            <button id="modo-tema">Cambiar Tema</button>
+        </nav>
+    </header>
+
+    <main id="cuerpo">
+        <section class="intro">
+            <h1>Bienvenido a Fitness Web</h1>
+            <p>Tu compañero ideal para mantenerte en forma.</p>
+        </section>
+
+        <section class="servicios">
+            <h2>Nuestros Servicios</h2>
+            <ol>
+                <li>Entrenamiento Personalizado</li>
+                <li>Planes de Alimentación</li>
+                <li>Clases Grupales</li>
+            </ol>
+            <h3>Agregar Plan</h3>
+            <form id="planesForm">
+                <input type="hidden" id="planId">
+                <input type="text" id="plan" placeholder="Plan" required>
+                <input type="number" id="duracion" placeholder="Duracion en meses" required>
+                <input type="text" id="precio" placeholder="Precio" required>
+                <button type="submit" id="submitBtn">Agregar</button>
+                <button type="button" id="submitBtn3">Agregar X 3</button>
+            </form>
+            <h3>Planes de Entrenamiento</h3>
+            <div id="filtros">
+                <label for="duracionFiltro">Duración:</label>
+                <select id="duracionFiltro">
+                    <option value="">Todos</option>
+                    <option value="1">1 Mes</option>
+                    <option value="3">3 Meses</option>
+                    <option value="6">6 Meses</option>
+                    <option value="12">12 Meses</option>
+                </select>
+            </div>
+            <table id="tablaDinamica">
+                <thead>
+                    <tr>
+                        <th>Plan</th>
+                        <th>Duración</th>
+                        <th>Precio</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpoTabla"></tbody>
+            </table>
+            <div id="paginacion">
+                <button id="btnAnterior">Anterior</button>
+                <button id="btnSiguiente">Siguiente</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Fitness Web. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="tablaDinamica.js"></script>
+    <script src="partialRender.js"></script>
+    <script src="captcha.js"></script>
+</body>
+</html>

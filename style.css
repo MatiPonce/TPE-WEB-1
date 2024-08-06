@@ -1,0 +1,271 @@
+/* Mobile First */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: rgb(235, 168, 26);
+    color: #000000;
+}
+
+header, footer {
+    background: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.logo img {
+    height: 70px;
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    display: none; /* Ocultamos el menú en la version mobil */
+}
+
+.nav-menu li {
+    display: block;
+    padding: 10px;
+}
+.nav-menu a:hover {
+    color: rgb(235, 168, 26);
+}
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-hamburguesa {
+    background: #333;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#modo-tema {
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(235, 168, 26);
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#modo-tema:hover {
+    background-color: #c4c8cac2;
+}
+
+.nav-menu.abierto {
+    display: block;
+    text-align: center;
+}
+
+main {
+    padding: 16px;
+}
+
+footer {
+    text-align: center;
+    padding-top: 16px ;
+    padding-bottom: 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: center;
+}
+
+.nosotros-image {
+    width: 100%;
+}
+
+.contacto-form {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    border: 2px solid #c4c8cac2;
+    width: 85%;
+}
+
+.contacto-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.contacto-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.contacto-form input,.contacto-form textarea {
+    width: 93%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.contacto-form textarea {
+    height: 120px;
+}
+
+.captcha {
+    display: flex;
+    flex-direction: column;
+}
+
+#captchaTexto {
+    margin-bottom:10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #f9f9f9;
+    text-align: center;
+    font-weight: bold;
+    color: red;
+    
+}
+
+.btnEnviar{
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btnEnviar:hover {
+    background-color: rgb(20, 82, 20);
+}
+/* Modo Oscuro */
+.modo-oscuro {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+#planesForm {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 0 auto;
+    border: 1px solid rgb(9, 9, 9);
+    border-radius: 5px;
+}
+
+#planesForm input, button {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#planesForm button {
+    background-color: rgb(20, 82, 20);
+    color: white;
+    cursor: pointer;
+}
+
+#planesForm button:hover {
+    background-color: rgb(32, 134, 32);
+}
+
+.btnBorrar {
+    background-color: #f44336;
+    color: white;
+    border-radius: 4px;
+}
+
+.btnBorrar:hover {
+    background-color: #d32f2f;
+}
+
+/* Botón de editar */
+.btnEditar{
+    background-color: rgb(20, 82, 20);
+    color: white;
+    border-radius: 4px;
+    margin: 10px;
+}
+
+.btnEditar:hover {
+    background-color: rgb(35, 98, 35);
+}
+.seleccionado{
+    background-color: rgb(235, 168, 26);
+
+}
+/* Media query para pantallas más grandes */
+@media (min-width: 768px) {
+    header, footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    footer{
+       padding-left: 16px;
+    }
+
+    nav {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+    }
+    .menu-hamburguesa {
+        display: none;
+    }
+    
+    .nosotros-image {
+        width: 50%;
+    }
+
+    .contacto-form {
+        width: 30%; 
+        margin-left: 32%;
+    }
+    
+    #planesForm {
+        max-width: 30%;
+        padding: 30px;
+        margin-left: 0;
+    }
+
+    #planesForm input, button {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    th, td {
+        text-align: left;
+    }
+
+}
+
+
